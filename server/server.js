@@ -6,6 +6,8 @@ const app = express();
 
 // routes
 const todo = require("./routes/todo");
+const user = require("./routes/user");
+
 connectDB();
 
 // initialize middleware
@@ -17,6 +19,8 @@ app.get("/", (req, res) => {
 
 // use routes
 app.use("/api/todo", todo);
+
+app.use("/api/user", user);
 
 
 // setting up port 
