@@ -8,8 +8,8 @@ function App() {
     <div className="app-contents">
     <BrowserRouter>
       <Routes>
-      <Route exact path="/" component={ ShowTodoList } />
-      <Route exact path="/" component={ CreateTodo } />
+      <Route exact path="/" component={ <ShowTodoList /> } />
+      <Route exact path="/create-todo" component={ <CreateTodo /> } />
       </Routes>
 
     </BrowserRouter>
