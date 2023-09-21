@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Route, Routes, BrowserRouter } from "react-router-dom";
 import { ShowTodoList } from "./components/showTodoList";
 import { CreateTodo } from "./components/createTodo";
 import "./App.scss";
@@ -8,8 +8,8 @@ function App() {
         <div className="app-contents">
             <BrowserRouter>
                <Routes>
-               <Route exact path="/" component={ShowTodoList} />
-                <Route path="/create-todo" component={CreateTodo} />
+               <Route path="/" element={ <ShowTodoList />} />
+                <Route path="/create-todo" element={ <CreateTodo />} />
                </Routes>
 
             </BrowserRouter>
